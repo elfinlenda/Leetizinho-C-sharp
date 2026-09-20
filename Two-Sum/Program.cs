@@ -1,8 +1,8 @@
-﻿
-// exibir o vetor que foi colocado 
-Console.Write("O Vetor usada no problema e --> ");
-int[] vetorTest = {12,2,6,9,3};
-int casas = vetorTest.Length;
+﻿// exibir o vetor que foi colocado 
+
+Console.Write("O Vetor num[] usada no problema e --> ");
+int[] vetorTest = {12,2,6,9,3,50}; // pode ser alterado.
+int casas = vetorTest.Length;     
 for(int i = 0; i < casas ;i++) 
 {
     int numero = vetorTest[i];
@@ -10,29 +10,27 @@ for(int i = 0; i < casas ;i++)
 }
 
 
-// exibicao do programa  
-Console.Write("\nVer se num[x] + num[y] == target !\nColoque o TARGET :");
+Console.Write("\nVer se num[x] + num[y] == target !\nColoque o TARGET :"); // exibicao do programa
 int Target;
 int.TryParse(Console.ReadLine(),out Target);
 
 
-
-
-// chamada do metodo da solucao
-Solution minhaSolucao = new();
+Solution minhaSolucao = new(); // chamada do metodo da solucao
 int[] Resposta = minhaSolucao.TwoSum(vetorTest,Target);
-
-
-// exibindo resposta 
-for(int i = 0; i < 2 ;i++) 
+ 
+for(int i = 0; i < 2 ;i++) // exibindo resposta
 {
     int numero = Resposta[i];
     Console.Write($"|{numero}");
 }
 
 
+// ===============================================================================
+//                              DIVISORIA 
+// ===============================================================================
 
 
+// public class da solucao do exercicio
 public class Solution 
 {
     // metodo TWO SUM
@@ -46,7 +44,6 @@ public class Solution
             int somador1 = nums[i];
             for(int j = i + 1; j < rodar; j++)
             {
-
                 int somador2 = nums[j];
                 int soma;
                 soma = somador1 + somador2;
@@ -55,14 +52,14 @@ public class Solution
                 {
                     resposta[0] = i;
                     resposta[1] = j;
-                    return resposta;
+                    return resposta;   // retorna os indicies que somados = target 
                 }
 
             } // for interno 
 
         } // for externo 
 
-            int[] Naoachado = {-1,-1};
+            int[] Naoachado = {-1,-1};  // retor um vetor -1,-1 quando nao ha correspondencia
             return Naoachado;
 
     } // metodo 
