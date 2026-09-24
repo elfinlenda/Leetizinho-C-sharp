@@ -38,6 +38,10 @@ int convertido = resposta.RomanToInt(Romano);
 Console.Write($" ==> {convertido}  <===");
 
 
+// ===============================================================================
+//                              DIVISORIA 
+// ===============================================================================
+
 public class Solution 
 {
     public int RomanToInt(string s)
