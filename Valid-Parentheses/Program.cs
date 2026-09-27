@@ -33,6 +33,11 @@ public class Solution {
             }
             else // quando os ({[ comecam a fechar
             {  
+                if (pilha_abre_fecha.Count == 0) // primeiro se nao haver nada para remover aqui, ja retorna false
+                {
+                    return false;
+                }
+
                 if(s[i] == ')')
                 {
                     if('(' == pilha_abre_fecha.Peek() ) // se o topo da pilha for o equivalente 
