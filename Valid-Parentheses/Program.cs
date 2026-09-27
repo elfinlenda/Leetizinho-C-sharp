@@ -7,7 +7,7 @@
 Solution resolver = new();
 
 
-Console.WriteLine($"{resolver.IsValid("([])")}");
+Console.WriteLine($"{resolver.IsValid("(])")}");
 
 
 
@@ -43,6 +43,9 @@ public class Solution {
                     if('(' == pilha_abre_fecha.Peek() ) // se o topo da pilha for o equivalente 
                     {
                         pilha_abre_fecha.Pop();  // remove o que esta no topo
+                    }else
+                    {
+                      return false;  
                     }
                 }
                 if(s[i] == '}')
@@ -50,6 +53,9 @@ public class Solution {
                     if('{' == pilha_abre_fecha.Peek() )// se o topo da pilha for o equivalente 
                     {
                         pilha_abre_fecha.Pop(); // remove o que esta no topo                   
+                    }else
+                    {
+                      return false;  
                     }
                 }
                 if(s[i] == ']')
@@ -57,6 +63,9 @@ public class Solution {
                     if( '[' == pilha_abre_fecha.Peek())// se o topo da pilha for o equivalente 
                     {
                         pilha_abre_fecha.Pop();// remove o que esta no topo
+                    }else
+                    {
+                      return false;  
                     }
                 }
                  
